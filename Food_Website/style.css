@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: relative;
+    width: 60%;
+    height: 75%;
+    background-color: rgb(235, 243, 240);
+    box-shadow: 0px 0px 50px -1px rgb(0, 0, 0, 0.5);
+    padding: 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: 1s linear;
+}
+
+header .logo {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 250px;
+    height: 365px;
+    background: rgb(56, 56, 55);
+    transition: 1s linear
+}
+
+header .logo h1 {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+header .logo img {
+    width: 300px;
+    margin: 20px 0px 0px -30px;
+    filter: drop-shadow(0px 0px 20px rgb(0, 0, 0, .6));
+}
+
+header nav {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .menu {
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+}
+
+header nav .right_menu {
+    display: flex;
+    align-items: center;
+}
+
+header nav .right_menu ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav .right_menu ul li {
+    padding: 3px 10px;
+}
+
+header nav .right_menu ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    transition: .3s linear;
+}
+
+/* header nav .right_menu ul li a::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: tomato;
+    border-radius: 50%;
+    bottom: -5px;
+    left: 45%;
+    opacity: 0;
+    transition: .3s linear;
+} */
+header nav .right_menu ul li a:hover {
+    color: red;
+}
+
+header nav .right_menu ul li a:hover::before {
+    opacity: 1;
+}
+
+header nav .right_menu .user_cart {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+
+}
+header nav .right_menu .user_cart .shoping_logo {
+    width: 24px;
+    height: 22px;
+    cursor: pointer;
+}
+
+
+header nav .right_menu .user_cart .user {
+    width: 24px;
+    height: 22px;
+    border-radius: 50%;
+    margin-left: 15px;
+
+}
+
+header nav .right_menu .user_cart .user img {
+    width: 100%;
+}
+
+header .left_menu {
+    width: 20px;
+    height: 90%;
+    border: 2px tomato;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .left_menu a {
+    margin: 20px 0px;
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    transition: 3s linear;
+    transform: rotate(-90deg);
+}
+
+header .left_menu a:hover {
+    color: tomato;
+}
+
+
+
+header section {
+    width: 95%;
+    height: 90%;
+   
+}
+
+header section .content {
+    position: relative;
+    left: 370px;
+    margin-top: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: 1s linear;
+}
+
+header section .content h1 {
+    font-size: 40px;
+    transition: 1s linear;
+}
+
+header section .content p {
+    font-size: 10px;
+    font-weight: 600;
+    width: 270px;
+    word-break: break-all;
+}
+
+header section .content .price_order {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header section .content .price_order .price h2 {
+    font-size: 30px;
+    color: red;
+    line-height: 25px;
+}
+
+header section .content .price_order .price p {
+    font-size: 10px;
+    width: 65px;
+    margin-top: 5px;
+}
+
+header section .content .price_order a {
+    padding: 9px 22px;
+    background-color: black;
+    color: rgb(255, 249, 249);
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 40px;
+    border-radius: 15px;
+}
+
+header section .content .price_order a:hover {
+    background-color: red;
+    color: black;
+    transition: .3s linear;
+}
+
+header section .cards {
+    width: 90%;
+    height: 150px;
+    cursor: pointer;
+    position: relative;
+    top: 20%;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    scroll-behavior: smooth;
+    transition: 1s linear;
+}
+
+header section .cards::-webkit-scrollbar {
+    display: none;
+}
+
+header section .cards .card {
+    position: relative;
+    min-width: 125px;
+    min-height: 125px;
+    margin-right: 30px;
+    background: rgb(54, 53, 53);
+    border-radius: 50px 10px 10px 10px;
+}
+
+header section .cards .card:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+header section .cards .card .dis {
+    width: 70px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+header section .cards .card .steam {
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    top: -35px;
+    left: -5px;
+}
+
+header section .cards .card h4 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+header section .cards .card h5 {
+    color: white;
+    font-size: 12px;
+    font-family: 500;
+    padding: 0px 10px;
+    margin-top: -8px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+header section .cards .card p {
+    color: rgb(203, 203, 203);
+    font-size: 10px;
+    font-weight: 500;
+    padding: 0px 10px;
+}
+
+header section .cards .card .rate_cart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 10px;
+    color: white;
+
+}
+
+header section .cards .card .rate_cart h6 {
+    font-size: 12px;
+}
+header section .cards .card .rate_cart h6 .bi {
+    font-size: 12px;
+}
+header section .social {
+    position: relative;
+    width: 100%;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s linear;
+}
+header section .social .btns {
+    margin-left: 30px;
+}
+header section .social .btns .bi {
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header section .social .btns .bi:hover {
+    color: black;
+}
+header section .social .icons {
+    display: flex;
+    align-items: center;
+}
+header section .social .icons a {
+    font-size: 20px;
+    margin-left: 12px;
+    color: rgb(84, 82, 82);
+    transition: .3s linear;
+}
+header section .social .icons a:hover {
+    color: black;
+}
+
+
+
+
+@media screen and ( max-width: 1290px) {
+   header {
+    width: 83%;
+    height: 85%;
+   }
+}
+@media screen and ( max-width: 992px) {
+    header {
+     width: 95%;
+    }
+    header section .cards {
+        top: 25%;
+        }
+        header section .social {
+            top: 27%;
+        }
+ }
+ 
+ @media screen and ( max-width: 815px) {
+    header section .content {
+    left: 320px;
+    }
+    header section {
+        width: 92%;
+    }
+ }
+ @media screen and ( max-width: 798px){
+    header {
+        width: 100%;
+        height: 90%;
+    }
+    header nav .right_menu ul li {
+        padding: 3px 4px;
+    }
+ }
+ @media screen and ( max-width: 798px) {
+    header nav .right_menu ul li {
+        text-align: column;
+    }
+ }
+ @media screen and ( max-width: 715px) {
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    header nav .right_menu ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 20%;
+        flex-direction: column;
+        width: 15px;
+        right: 17px;
+    }
+    header nav .right_menu ul li {
+        padding: 30px 10px;
+        transform: rotate(90deg);
+    }
+    header section .content {
+        left: 29%;
+        top: 40%;
+    }
+    header .logo {
+        left: 30%;
+    }
+        header section .cards {
+        top: 40%;
+        }
+        header section .social {
+            top: 40%;
+        }
+     
+ }
+ @media screen and ( max-width: 600px){
+    header .logo {
+        left: 23%;
+    }
+    header section .content {
+        left: 20%;
+        top: 47%;
+    }
+    header section .cards {
+        top: 47%;
+        }
+        header section .social {
+            top: 46%;
+        }
+ }
+ @media screen and ( max-width: 403px) {
+    header .logo {
+        left: 22%;
+        width: 185px;
+        height: 355px;
+    }
+    header section .content {
+        left: 7%;
+        top: 47%;
+    }
+    header section .cards {
+        top: 47%;
+        }
+        header section .social {
+            top: 46%;
+        }
+        header .logo img {
+            width: 250px;
+        }
+    }
+
+ 
